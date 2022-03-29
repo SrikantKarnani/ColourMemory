@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Colour Memory</string>
+    <string name="scores">Yayy you scored %d !!!. Your rank id %2$d Save your scores now.</string>
+    <string name="intro_text">Remember the color shown on cards and find all the matching pair and Score a highest points.</string>
+    <string name="your_name">Your Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="start_game">Start Game</string>
+    <string name="back">Back</string>
+    <string name="rank">Rank</string>
+    <string name="name">Name</string>
+    <string name="score">Score</string>
+    <string name="high_scores">High Scores</string>
+    <string name="replay">Replay</string>
+</resources>

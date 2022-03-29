@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_graph"
+    app:startDestination="@id/intro_screen">
+
+    <fragment
+        android:id="@+id/intro_screen"
+        android:name="com.example.colourmemory.ui.intro.GameIntroFragment">
+        <action
+            android:id="@+id/action_intro_to_game_fragment"
+            app:destination="@id/game_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/game_fragment"
+        android:name="com.example.colourmemory.ui.game.GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_game_fragment_to_saveScoreDialog"
+            app:destination="@id/saveScoreDialog" />
+        <action
+            android:id="@+id/action_game_fragment_to_highScoresFragment"
+            app:destination="@id/high_scores"
+            app:popUpTo="@id/intro_screen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <dialog
+        android:id="@+id/saveScoreDialog"
+        android:name="com.example.colourmemory.ui.game.SaveScoreDialog"
+        android:label=""
+        tools:layout="@layout/dialog_save_score">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="rank"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/high_scores"
+        android:name="com.example.colourmemory.ui.scores.HighScoresFragment" />
+</navigation>
